@@ -68,7 +68,7 @@
     </div>
 
     <div class="icons">
-      <div class="px-4">FOLLOW US</div>
+      <div class="px-4 text-primary fw-bold">FOLLOW US</div>
       <ul>
         <li>
           <a href="#"
@@ -132,5 +132,8 @@
 .footer-content-right {
   background-image: url(../assets/img/dc-logo-bg.png);
   height: 100%;
+}
+button {
+  @include button_active();
 }
 </style>
