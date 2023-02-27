@@ -1,4 +1,4 @@
-@mixin align_row() {
+@mixin align_li() {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,5 +7,28 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+  }
+}
+@mixin align_div() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin footer_style() {
+  background-image: url(../../../../public/footer-bg.jpg);
+  .title {
+    color: white;
+  }
+  ul {
+    color: gray;
+  }
+}
+@mixin bottom_section() {
+  background-color: #0282f9;
+  padding: 2rem 0;
+
+  a {
+    color: white;
   }
 }

@@ -2,7 +2,12 @@
 
 <template>
   <div class="container">
-    <div class="logo">logo</div>
+    <div class="logo">
+      <img
+        src="../assets/img/dc-logo.png"
+        alt=""
+      />
+    </div>
     <div class="nav">
       <ul>
         <li><a href="#">CHARACTERS</a></li>
@@ -24,6 +29,6 @@
 @use "../assets/styles/partials/mixins.scss" as *;
 .container,
 .nav {
-  @include align_row();
+  @include align_li();
 }
 </style>

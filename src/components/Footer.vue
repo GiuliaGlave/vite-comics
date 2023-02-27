@@ -3,7 +3,7 @@
 <template>
   <!-- FOOTER TOP -->
   <div class="container-top">
-    <div class="footer-content col-4 d-flex py-4">
+    <div class="footer-content-left col-4 d-flex py-4">
       <!-- dc comics -->
       <div class="footer-list px-3">
         <div class="title">DC COMICS</div>
@@ -54,6 +54,12 @@
         </ul>
       </div>
     </div>
+    <div class="footer-content-right col-6">
+      <!-- <img
+        src="../assets/img/dc-logo-bg.png"
+        alt=""
+      /> -->
+    </div>
   </div>
 
   <div class="container-bottom">
@@ -65,23 +71,43 @@
       <div class="px-4">FOLLOW US</div>
       <ul>
         <li>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"
+            ><img
+              src="../assets/img/footer-facebook.png"
+              alt=""
+          /></a>
         </li>
 
         <li>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"
+            ><img
+              src="../assets/img/footer-twitter.png"
+              alt=""
+          /></a>
         </li>
 
         <li>
-          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"
+            ><img
+              src="../assets/img/footer-youtube.png"
+              alt=""
+          /></a>
         </li>
 
         <li>
-          <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+          <a href="#"
+            ><img
+              src="../assets/img/footer-pinterest.png"
+              alt=""
+          /></a>
         </li>
 
         <li>
-          <a href="#"><i class="fa-solid fa-location-dot"></i></a>
+          <a href="#"
+            ><img
+              src="../assets/img/footer-periscope.png"
+              alt=""
+          /></a>
         </li>
       </ul>
     </div>
@@ -90,8 +116,21 @@
 
 <style lang="scss" scoped>
 @use "../assets/styles/partials/mixins.scss" as *;
+
 .container-bottom,
 .icons {
-  @include align_row();
+  @include align_li();
+  background-color: #303030;
+  padding: 1rem 0;
+}
+.container-top {
+  @include footer_style();
+  @include align_div();
+  height: fit-content;
+}
+
+.footer-content-right {
+  background-image: url(../assets/img/dc-logo-bg.png);
+  height: 100%;
 }
 </style>
