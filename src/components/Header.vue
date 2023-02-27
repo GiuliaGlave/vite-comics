@@ -22,7 +22,8 @@
 
 <style lang="scss" scoped>
 @use "../assets/styles/partials/mixins.scss" as *;
-.container {
+.container,
+.nav {
   @include align_row();
 }
 </style>
