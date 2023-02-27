@@ -16,4 +16,9 @@
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@use "../assets/styles/partials/mixins.scss" as *;
+.section {
+  @include align_row();
+}
+</style>

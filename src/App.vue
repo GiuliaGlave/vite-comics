@@ -19,12 +19,6 @@ export default {
   </div>
 </template>
 
-<style>
-ul {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
+<style lang="scss">
+@use "./assets/styles/generals.scss";
 </style>

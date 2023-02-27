@@ -5,19 +5,24 @@
     <div class="logo">logo</div>
     <div class="nav">
       <ul>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
-        <li><a href="#">link</a></li>
+        <li><a href="#">CHARACTERS</a></li>
+        <li><a href="#">COMICS</a></li>
+        <li><a href="#">MOVIES</a></li>
+        <li><a href="#">TV</a></li>
+        <li><a href="#">GAMES</a></li>
+        <li><a href="#">COLLECTIBLES</a></li>
+        <li><a href="#">VIDEOS</a></li>
+        <li><a href="#">FANS</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">SHOP</a></li>
       </ul>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@use "../assets/styles/partials/mixins.scss" as *;
+.container {
+  @include align_row();
+}
+</style>

@@ -33,4 +33,10 @@
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@use "../assets/styles/partials/mixins.scss" as *;
+.container,
+.icons {
+  @include align_row();
+}
+</style>
