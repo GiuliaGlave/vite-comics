@@ -2,8 +2,8 @@
 
 <template>
   <!-- FOOTER TOP -->
-  <div class="container-fluid">
-    <div class="footer-content-left col-4 d-flex py-4">
+  <footer>
+    <div class="footer-content-left">
       <!-- dc comics -->
       <div class="footer-list px-3">
         <div class="title">DC COMICS</div>
@@ -16,15 +16,14 @@
           <li>Videos</li>
           <li>News</li>
         </ul>
-      </div>
-      <!-- shop -->
-      <div class="footer-list px-3">
-        <div class="title">SHOP</div>
+        <!-- shop -->
+        <div class="title pt-3">SHOP</div>
         <ul>
           <li>Shop DC</li>
           <li>Shop DC Collectibles</li>
         </ul>
       </div>
+
       <!-- dc -->
       <div class="footer-list px-3">
         <div class="title">DC</div>
@@ -54,21 +53,16 @@
         </ul>
       </div>
     </div>
-    <div class="footer-content-right col-6">
-      <!-- <img
-        src="../assets/img/dc-logo-bg.png"
-        alt=""
-      /> -->
-    </div>
-  </div>
+    <div class="footer-content-right"></div>
+  </footer>
 
-  <div class="container-bottom">
+  <div class="footer-bottom">
     <div>
       <button>SIGN-UP NOW!</button>
     </div>
 
     <div class="icons">
-      <div class="px-4 text-primary fw-bold">FOLLOW US</div>
+      <div class="px-4 text-primary fw-bold fs-4">FOLLOW US</div>
       <ul>
         <li>
           <a href="#"
@@ -117,22 +111,31 @@
 <style lang="scss" scoped>
 @use "../assets/styles/partials/mixins.scss" as *;
 
-.container-bottom,
+.footer-bottom,
 .icons {
   @include align_list();
   background-color: #303030;
   padding: 1rem 0;
 }
-.container-fluid {
+footer {
   @include footer_style();
   @include align_div();
-  height: fit-content;
+
+  background-image: url(../assets/img/footer-bg.jpg);
 }
 
+.footer-content-left {
+  display: flex;
+}
 .footer-content-right {
   background-image: url(../assets/img/dc-logo-bg.png);
-  height: 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+
+  width: 40rem;
+  height: 20rem;
 }
+
 button {
   @include button_hover();
 }

@@ -51,9 +51,12 @@
   background-image: url(/footer-bg.jpg);
   .title {
     @include light_color_text();
+    font-weight: bold;
   }
   ul {
     color: gray;
+    font-size: smaller;
+    line-height: 150%;
   }
 }
 @mixin bottom_section() {
