@@ -1,4 +1,43 @@
-<script></script>
+<script>
+export default {
+  data() {
+    return {
+      links: [
+        {
+          text: "CHARACTERS",
+        },
+        {
+          text: "COMICS",
+        },
+        {
+          text: "MOVIES",
+        },
+        {
+          text: "TV",
+        },
+        {
+          text: "GAMES",
+        },
+        {
+          text: "COLLECTIBLES",
+        },
+        {
+          text: "VIDEOS",
+        },
+        {
+          text: "FANS",
+        },
+        {
+          text: "NEWS",
+        },
+        {
+          text: "SHOP",
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <template>
   <header>
@@ -9,17 +48,10 @@
       />
     </div>
     <div class="nav">
-      <ul>
-        <li><a href="#">CHARACTERS</a></li>
-        <li><a href="#">COMICS</a></li>
-        <li><a href="#">MOVIES</a></li>
-        <li><a href="#">TV</a></li>
-        <li><a href="#">GAMES</a></li>
-        <li><a href="#">COLLECTIBLES</a></li>
-        <li><a href="#">VIDEOS</a></li>
-        <li><a href="#">FANS</a></li>
-        <li><a href="#">NEWS</a></li>
-        <li><a href="#">SHOP</a></li>
+      <ul v-for="link in links">
+        <li>
+          <a href="#"> {{ link.text }} </a>
+        </li>
       </ul>
     </div>
   </header>
@@ -40,7 +72,7 @@ header {
 
   a {
     @include dark_color_text();
-
+    margin: 0 1rem;
     font-weight: bold;
     display: flex;
     align-items: center;
