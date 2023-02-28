@@ -2,7 +2,7 @@
 
 <template>
   <!-- FOOTER TOP -->
-  <div class="container-top">
+  <div class="container-fluid">
     <div class="footer-content-left col-4 d-flex py-4">
       <!-- dc comics -->
       <div class="footer-list px-3">
@@ -119,11 +119,11 @@
 
 .container-bottom,
 .icons {
-  @include align_li();
+  @include align_list();
   background-color: #303030;
   padding: 1rem 0;
 }
-.container-top {
+.container-fluid {
   @include footer_style();
   @include align_div();
   height: fit-content;
@@ -134,6 +134,6 @@
   height: 100%;
 }
 button {
-  @include button_active();
+  @include button_hover();
 }
 </style>

@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <div class="container">
+  <header>
     <div class="logo">
       <img
         src="../assets/img/dc-logo.png"
@@ -22,13 +22,33 @@
         <li><a href="#">SHOP</a></li>
       </ul>
     </div>
-  </div>
+  </header>
 </template>
 
 <style lang="scss" scoped>
 @use "../assets/styles/partials/mixins.scss" as *;
-.container,
+
+header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
 .nav {
-  @include align_li();
+  @include align_list();
+
+  a {
+    @include dark_color_text();
+
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    &:hover {
+      @include primary_color_text();
+      @include nav_hover();
+    }
+  }
 }
 </style>

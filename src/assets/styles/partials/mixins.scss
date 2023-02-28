@@ -1,12 +1,44 @@
-@mixin align_li() {
+/* COLORS */
+/* text */
+@mixin primary_color_text() {
+  color: #0282f9;
+}
+@mixin light_color_text() {
+  color: white;
+}
+@mixin dark_color_text() {
+  color: #1c1c1c;
+}
+/* background */
+@mixin primary_color_bg() {
+  background-color: #0282f9;
+}
+@mixin light_color_bg() {
+  background-color: white;
+}
+@mixin dark_color_bg() {
+  background-color: #1c1c1c;
+}
+/* border */
+@mixin primary_color_border() {
+  border-bottom: solid 5px #0282f9;
+}
+
+/* ALIGNMENT */
+@mixin align_list() {
   display: flex;
   justify-content: space-between;
   align-items: center;
   ul {
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+
+    li {
+      height: 100%;
+    }
   }
 }
 @mixin align_div() {
@@ -18,26 +50,49 @@
 @mixin footer_style() {
   background-image: url(/footer-bg.jpg);
   .title {
-    color: white;
+    @include light_color_text();
   }
   ul {
     color: gray;
   }
 }
 @mixin bottom_section() {
-  background-color: #0282f9;
+  @include primary_color_bg();
   padding: 2rem 0;
+  justify-content: center;
 
   a {
-    color: white;
+    @include light_color_text();
   }
 }
-@mixin button_active {
+
+@mixin button_hover {
   background-color: transparent;
   border: solid thin gray;
-  color: white;
+  @include light_color_text();
   padding: 1rem;
   &:hover {
     border: solid blue;
+  }
+}
+@mixin nav_hover {
+  &:hover {
+    @include primary_color_border();
+  }
+}
+
+//con questa dicitura se non specifico nulla il flex-center del mixin allinea gli elementi sull'asse x e y di default
+@mixin flex-center($axis: "central") {
+  display: flex;
+
+  //se specifico che il flex-center del mixin è "horizontal" allineo gli elementi sull'asse x
+  @if $axis == "horizontal" {
+    justify-content: center;
+  } @else if $axis == "central" {
+    justify-content: center;
+    align-items: center;
+    //se specifico che il flex-center del mixin è "vertical" allineo gli elementi sull'asse y
+  } @else if $axis == "vertical" {
+    align-items: center;
   }
 }
