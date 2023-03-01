@@ -1,13 +1,13 @@
 <script>
 import Header from "./components/Header.vue";
 import Content from "./components/Content.vue";
-import BottomSection from "./components/BottomSection.vue";
+import ShopSection from "./components/ShopSection.vue";
 import Footer from "./components/Footer.vue";
 export default {
   components: {
     Header,
     Content,
-    BottomSection,
+    ShopSection,
     Footer,
   },
 };
@@ -18,7 +18,7 @@ export default {
     <header><Header /></header>
     <main>
       <div class="content"><Content /></div>
-      <div><BottomSection /></div>
+      <div><ShopSection /></div>
     </main>
     <footer><Footer /></footer>
   </div>

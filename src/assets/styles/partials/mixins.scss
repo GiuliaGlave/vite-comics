@@ -59,7 +59,7 @@
     line-height: 150%;
   }
 }
-@mixin bottom_section() {
+@mixin shop_section() {
   @include primary_color_bg();
   padding: 2rem 0;
   justify-content: center;

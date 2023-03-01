@@ -8,19 +8,19 @@ export default {
           text: "DIGITAL COMICS",
         },
         {
-          img: "img2",
+          img: "buy-comics-merchandise.png",
           text: "DC MERCHANDISE",
         },
         {
-          img: "img3",
+          img: "buy-comics-subscriptions.png",
           text: "SUBSCRIPTION",
         },
         {
-          img: "img4",
+          img: "buy-comics-shop-locator.png",
           text: "COMIC SHOP LOCATOR",
         },
         {
-          img: "img5",
+          img: "buy-dc-power-visa.svg",
           text: "DC POWER VISA",
         },
       ],
@@ -28,23 +28,23 @@ export default {
   },
 
   methods: {
-    imgPath: function (img) {
-      return new URL(`../assets/${img}`, import.meta.url).href;
+    getImagePath: function (img) {
+      return new URL(`../assets/img/${img}`, import.meta.url).href;
     },
   },
 };
 </script>
+
 <template>
-  <div class="bottom-section">
+  <div class="shop-section">
     <ul v-for="card in cards">
       <li>
         <a href="#"
           ><div>
             <img
-              :src="imgPath(img)"
+              :src="getImagePath(card.img)"
               alt=""
             />
-            {{ card.img }}
           </div>
           <div>{{ card.text }}</div></a
         >
@@ -55,10 +55,10 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/styles/partials/mixins.scss" as *;
 
-.bottom-section,
+.shop-section,
 a {
   @include align_list();
-  @include bottom_section();
+  @include shop_section();
   justify-content: space-between;
   gap: 2rem;
 }
