@@ -131,6 +131,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/styles/partials/mixins.scss" as *;
+@use "../assets/styles/partials/variables.scss" as *;
 .jumbotron {
   object-fit: cover;
   object-position: top;
@@ -140,15 +141,20 @@ export default {
 section {
   max-width: 80%;
   margin: 0 auto;
-  background-color: green;
+  background-color: $light_color;
 }
 ul {
-  @include align_list();
+  @include flex-center("horizontal");
+
   flex-wrap: wrap;
 
   li {
-    width: calc((100% / 6) - 2rem);
-    margin: 1rem;
+    width: calc((100% / 6));
+    gap: 2rem;
+    a {
+      color: $light_color;
+      flex-direction: column;
+    }
   }
 }
 </style>

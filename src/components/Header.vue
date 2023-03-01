@@ -59,6 +59,7 @@ export default {
 
 <style lang="scss" scoped>
 @use "../assets/styles/partials/mixins.scss" as *;
+@use "../assets/styles/partials/variables.scss" as *;
 
 header {
   width: 100%;
@@ -71,14 +72,14 @@ header {
   @include align_list();
 
   a {
-    @include dark_color_text();
+    color: $dark_color;
     margin: 0 1rem;
     font-weight: bold;
     display: flex;
     align-items: center;
     height: 100%;
     &:hover {
-      @include primary_color_text();
+      color: $primary_color;
       @include nav_hover();
     }
   }

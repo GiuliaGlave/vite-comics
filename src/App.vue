@@ -27,17 +27,18 @@ export default {
 <style lang="scss">
 @use "./assets/styles/generals.scss";
 @use "./assets/styles/partials/mixins.scss" as *;
+@use "./assets/styles/partials/variables.scss" as *;
 
 header {
   @include align_list();
 }
 
 main {
-  @include dark_color_bg();
+  background-color: $dark_color;
   padding: 0;
   margin: 0;
 }
 .content {
-  @include light_color_text();
+  color: $light_color;
 }
 </style>

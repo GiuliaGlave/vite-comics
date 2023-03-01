@@ -1,28 +1,4 @@
-/* COLORS */
-/* text */
-@mixin primary_color_text() {
-  color: #0282f9;
-}
-@mixin light_color_text() {
-  color: white;
-}
-@mixin dark_color_text() {
-  color: #1c1c1c;
-}
-/* background */
-@mixin primary_color_bg() {
-  background-color: #0282f9;
-}
-@mixin light_color_bg() {
-  background-color: white;
-}
-@mixin dark_color_bg() {
-  background-color: #1c1c1c;
-}
-/* border */
-@mixin primary_color_border() {
-  border-bottom: solid 5px #0282f9;
-}
+@use "./variables.scss" as *;
 
 /* ALIGNMENT */
 @mixin align_list() {
@@ -50,7 +26,7 @@
 @mixin footer_style() {
   background-image: url(/footer-bg.jpg);
   .title {
-    @include light_color_text();
+    color: $light_color;
     font-weight: bold;
   }
   ul {
@@ -60,27 +36,27 @@
   }
 }
 @mixin shop_section() {
-  @include primary_color_bg();
+  background-color: $primary_color;
   padding: 2rem 0;
   justify-content: center;
 
   a {
-    @include light_color_text();
+    color: $light_color;
   }
 }
 
 @mixin button_hover {
   background-color: transparent;
   border: solid thin gray;
-  @include light_color_text();
+  color: $light_color;
   padding: 1rem;
   &:hover {
-    border: solid blue;
+    border: solid $primary_color;
   }
 }
 @mixin nav_hover {
   &:hover {
-    @include primary_color_border();
+    border-bottom: 5px solid $primary_color;
   }
 }
 
