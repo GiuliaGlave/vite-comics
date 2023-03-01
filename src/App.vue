@@ -39,6 +39,5 @@ main {
 }
 .content {
   @include light_color_text();
-  padding: 3rem 0;
 }
 </style>
