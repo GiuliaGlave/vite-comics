@@ -40,17 +40,19 @@ export default {
 </script>
 
 <template>
-  <header>
-    <div class="logo">
+  <header class="content">
+    <div class="logo py-4">
       <img
         src="../assets/img/dc-logo.png"
         alt=""
       />
     </div>
     <div class="nav">
-      <ul v-for="link in links">
-        <li>
-          <a href="#"> {{ link.text }} </a>
+      <ul>
+        <li v-for="link in links">
+          <a href="#">
+            {{ link.text }}
+          </a>
         </li>
       </ul>
     </div>
@@ -83,5 +85,9 @@ header {
       @include nav_hover();
     }
   }
+}
+
+.content {
+  @include margin_app();
 }
 </style>

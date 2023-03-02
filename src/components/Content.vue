@@ -109,23 +109,30 @@ export default {
       class="jumbotron"
     />
   </div>
-  <section>
-    <ul>
+  <div class="position-relative">
+    <span class="label fs-1">CURRENT SERIES</span>
+  </div>
+
+  <section class="pt-5">
+    <ul class="my-5">
       <li
         v-for="comic in comics"
-        class="bg-dark"
+        class="mb-4"
       >
         <a href="#">
-          <div>
+          <div class="cover">
             <img
               :src="comic.thumb"
               alt=""
             />
           </div>
-          <div>{{ comic.series }}</div>
+          <div class="series">{{ comic.series }}</div>
         </a>
       </li>
     </ul>
+    <div class="d-flex justify-content-center mb-4">
+      <button>LOAD MORE</button>
+    </div>
   </section>
 </template>
 
@@ -141,8 +148,19 @@ export default {
 section {
   max-width: 80%;
   margin: 0 auto;
-  background-color: $light_color;
 }
+
+span {
+  position: absolute;
+  bottom: -3rem;
+  left: 10rem;
+}
+
+.label,
+button {
+  @include label();
+}
+
 ul {
   @include flex-center("horizontal");
 
@@ -150,10 +168,29 @@ ul {
 
   li {
     width: calc((100% / 6));
-    gap: 2rem;
+    height: 18rem;
+
     a {
       color: $light_color;
       flex-direction: column;
+      display: flex;
+      height: 100%;
+      gap: 1rem;
+      padding: 1rem;
+      .cover {
+        height: 85%;
+
+        img {
+          object-fit: cover;
+          object-position: top;
+          /* debug */
+          height: 100%;
+          width: 100%;
+        }
+      }
+      .series {
+        height: auto;
+      }
     }
   }
 }

@@ -36,8 +36,11 @@ export default {
 </script>
 
 <template>
-  <div class="shop-section">
-    <ul v-for="card in cards">
+  <div class="shop-section content">
+    <ul
+      v-for="card in cards"
+      class="content"
+    >
       <li>
         <a href="#"
           ><div>
@@ -61,5 +64,9 @@ a {
   @include shop_section();
   justify-content: space-between;
   gap: 2rem;
+}
+
+.content {
+  @include margin_app();
 }
 </style>

@@ -14,10 +14,10 @@ export default {
 </script>
 
 <template>
-  <div class="">
-    <header><Header /></header>
+  <div>
+    <header class="content"><Header /></header>
     <main>
-      <div class="content"><Content /></div>
+      <div><Content /></div>
       <div><ShopSection /></div>
     </main>
     <footer><Footer /></footer>
@@ -29,6 +29,8 @@ export default {
 @use "./assets/styles/partials/mixins.scss" as *;
 @use "./assets/styles/partials/variables.scss" as *;
 
+.app-container {
+}
 header {
   @include align_list();
 }
@@ -37,8 +39,5 @@ main {
   background-color: $dark_color;
   padding: 0;
   margin: 0;
-}
-.content {
-  color: $light_color;
 }
 </style>

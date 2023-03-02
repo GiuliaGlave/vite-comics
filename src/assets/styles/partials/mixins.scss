@@ -22,6 +22,9 @@
   justify-content: space-between;
   align-items: center;
 }
+@mixin margin_app() {
+  padding: 0 5rem;
+}
 
 @mixin footer_style() {
   background-image: url(/footer-bg.jpg);
@@ -43,6 +46,13 @@
   a {
     color: $light_color;
   }
+}
+@mixin label() {
+  background-color: $primary_color;
+  padding: 1rem 2rem;
+
+  color: $light_color;
+  border: none;
 }
 
 @mixin button_hover {
