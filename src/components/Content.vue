@@ -62,7 +62,7 @@ export default {
   object-fit: cover;
   object-position: top;
   width: 100%;
-  height: 30rem;
+  height: 40vh;
 }
 section {
   max-width: 80%;
@@ -81,34 +81,29 @@ button {
 }
 
 ul {
-  @include flex-center("horizontal");
-
+  display: flex;
   flex-wrap: wrap;
 
   li {
     width: calc((100% / 6));
-    height: 18rem;
 
     a {
       color: $light_color;
       flex-direction: column;
       display: flex;
-      height: 100%;
+      width: 100%;
       gap: 1rem;
       padding: 1rem;
       .cover {
-        height: 85%;
-
         img {
           object-fit: cover;
           object-position: top;
-          /* debug */
-          height: 100%;
           width: 100%;
+          aspect-ratio: 1;
         }
       }
       .series {
-        height: auto;
+        font-size: 1rem;
       }
     }
   }

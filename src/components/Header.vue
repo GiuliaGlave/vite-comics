@@ -68,21 +68,23 @@ header {
   height: 100%;
   display: flex;
   align-items: stretch;
-}
+  img {
+    min-width: 5rem;
+  }
+  .nav {
+    @include align_list();
 
-.nav {
-  @include align_list();
-
-  a {
-    color: $dark_color;
-    margin: 0 1rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    &:hover {
-      color: $primary_color;
-      @include nav_hover();
+    a {
+      color: $dark_color;
+      margin: 0 1rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      &:hover {
+        color: $primary_color;
+        @include nav_hover();
+      }
     }
   }
 }

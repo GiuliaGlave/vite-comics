@@ -37,11 +37,8 @@ export default {
 
 <template>
   <div class="shop-section content">
-    <ul
-      v-for="card in cards"
-      class="content"
-    >
-      <li>
+    <ul class="content">
+      <li v-for="card in cards">
         <a href="#"
           ><div>
             <img
@@ -60,10 +57,27 @@ export default {
 
 .shop-section,
 a {
-  @include align_list();
   @include shop_section();
-  justify-content: space-between;
+}
+
+ul {
+  @include flex-center();
   gap: 2rem;
+
+  li {
+    a {
+      @include flex-center();
+      gap: 2rem;
+
+      div {
+        img {
+          min-width: 5rem;
+          aspect-ratio: 1;
+          object-fit: contain;
+        }
+      }
+    }
+  }
 }
 
 .content {

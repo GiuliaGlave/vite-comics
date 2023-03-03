@@ -124,7 +124,8 @@ footer {
 
 .footer-top {
   @include footer_style();
-  @include align_div();
+  @include flex-center();
+  justify-content: space-between;
 
   background-image: url(../assets/img/footer-bg.jpg);
   .footer-content-left {
@@ -135,8 +136,8 @@ footer {
     background-repeat: no-repeat;
     background-position: right;
 
-    width: 40rem;
-    height: 20rem;
+    min-width: 40rem;
+    min-height: 20rem;
   }
 }
 
